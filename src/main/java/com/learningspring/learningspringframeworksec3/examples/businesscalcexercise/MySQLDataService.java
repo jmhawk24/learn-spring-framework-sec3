@@ -2,8 +2,9 @@ package com.learningspring.learningspringframeworksec3.examples.businesscalcexer
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 @Qualifier("mysqlQualifier")
 public class MySQLDataService implements DataServiceInterface {
     @Override

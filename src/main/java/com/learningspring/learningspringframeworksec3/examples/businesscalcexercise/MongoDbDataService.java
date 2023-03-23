@@ -2,8 +2,9 @@ package com.learningspring.learningspringframeworksec3.examples.businesscalcexer
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 @Primary
 public class MongoDbDataService implements DataServiceInterface {
     @Override

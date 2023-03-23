@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+    <bean id="name" class="java.lang.String">
+        <constructor-arg value="JACOB" />
+    </bean>
+
+<!--    <context:component-scan base-package="com.learningspring.learnspringframeworksec3.game" />-->
+<!-- we can also define beans individually-->
+    <bean id="zeldaGame" class="com.learningspring.learnspringframeworksec3.game.ZeldaGame"></bean>
+
+    <bean id="gameRunner" class="com.learningspring.learnspringframeworksec3.game.GameRunner">
+        <constructor-arg ref="zeldaGame" /> <!-- this injects our other bean into the constructor of GameRunner -->
+    </bean>
+
+</beans>
